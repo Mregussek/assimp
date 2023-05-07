@@ -591,10 +591,37 @@ void ObjFileImporter::createMaterials(const ObjFile::Model *pModel, aiScene *pSc
             sm = aiShadingMode_NoShading;
             break;
         case 1:
-            sm = aiShadingMode_Gouraud;
+            sm = aiShadingMode_Flat;
             break;
         case 2:
+            sm = aiShadingMode_Gouraud;
+            break;
+        case 3:
             sm = aiShadingMode_Phong;
+            break;
+        case 4:
+            sm = aiShadingMode_Blinn;
+            break;
+        case 5:
+            sm = aiShadingMode_Toon;
+            break;
+        case 6:
+            sm = aiShadingMode_OrenNayar;
+            break;
+        case 7:
+            sm = aiShadingMode_Minnaert;
+            break;
+        case 8:
+            sm = aiShadingMode_CookTorrance;
+            break;
+        case 9:
+            sm = aiShadingMode_NoShading;
+            break;
+        case 10:
+            sm = aiShadingMode_Fresnel;
+            break;
+        case 11:
+            sm = aiShadingMode_PBR_BRDF;
             break;
         default:
             sm = aiShadingMode_Gouraud;
